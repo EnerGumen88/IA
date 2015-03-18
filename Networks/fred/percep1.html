@@ -1,0 +1,766 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>GINNet - Results</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="DynNet version 2.5.2 (http://ginnet.gforge.inria.fr/)">
+<meta name="Copyright" content="CeCILL">
+<style type="text/css">
+body { 
+	font: 12pt/14pt georgia; 
+	color: #313a70;
+	margin: 5px; 
+	text-align: center;
+}
+
+h1 {
+	/* Border */
+	border-style: solid; 
+	border-width: 5px; 
+	border-color: #313a70;
+	font: 16pt/18pt georgia;
+	font-weight: bold;
+	margin: 10px;
+	text-align: center;
+	background-color: #FFA07A;
+}
+
+h2 { 
+	/* Border */
+	border-style: solid; 
+	border-width: 2px; 
+	font: 14pt/14pt georgia;
+	font-weight: bold;
+	margin: 5px;
+	text-align: center;
+	background-color: #FFA07A;
+}
+
+h3 { 
+	/* Border */
+	border-style: solid; 
+	border-width: 1px; 
+	font: 14pt/14pt georgia;
+	font-weight: bold;
+	margin: 5px;
+	text-align: center;
+}
+
+caption {
+	font-weight: bold;
+	font: 14pt/16pt georgia; 
+	margin: 5px;
+}
+
+hr {
+	width: 100%
+	height: 1px;
+	border: 0;
+	background-color: #313a70;
+}
+</style>
+</head>
+<body>
+<h1>Perceptron</h1>
+Wed Mar 18 17:14:07 CET 2015<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+Description</b></caption><tr>
+	<th align="center">Architecture:</th>
+	<td valign="middle">60(Linear) x 10(TanH) x 2(Gibbs)</td>
+</tr>
+<tr>
+	<th align="center">Batch:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Stopping function:</th>
+	<td valign="middle">Time stopping function that stops after 100 cycles</td>
+</tr>
+<tr>
+	<th align="center">Learning rate function:</th>
+	<td valign="middle">Decreasing learning rate function from 0.05 to 0.005 on 1000 cycles with current learning rate = 0.039807968</td>
+</tr>
+<tr>
+	<th align="center">Regression:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Momentum:</th>
+	<td valign="middle">0.0</td>
+</tr>
+<tr>
+	<th align="center">Bias:</th>
+	<td valign="middle">true</td>
+</tr>
+</table>
+<br>
+<h3>Results:</h3>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+After <b>100</b> cycles:</b></caption><tr>
+	<th align="center"><font color ="#008200">Learn error:</font></th>
+	<td valign="middle">0.086538464</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#7B2CB5">Validation error:</font></th>
+	<td valign="middle">0.40384614</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#FF0031">Test error:</font></th>
+	<td valign="middle">0.23076923</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#C8FFC8">
+<caption><font color="#008200"<b>Learn Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>100,00% (59)</td>
+	<td>00,00% (0)</td>
+<td>56,73% (59)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>20,00% (9)</td>
+	<td>80,00% (36)</td>
+<td>43,27% (45)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>65,38% (68)</td>
+	<td>34,62% (36)</td>
+	<td bgcolor="#FFFFFF"><font color="#008200">91,35% (95 / 104)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#D7C8FF">
+<caption><font color="#7B2CB5"<b>Validation Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>84,00% (21)</td>
+	<td>16,00% (4)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>62,96% (17)</td>
+	<td>37,04% (10)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>73,08% (38)</td>
+	<td>26,92% (14)</td>
+	<td bgcolor="#FFFFFF"><font color="#7B2CB5">59,62% (31 / 52)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#FFC8BE">
+<caption><font color="#FF0031"<b>Test Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>100,00% (27)</td>
+	<td>00,00% (0)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>48,00% (12)</td>
+	<td>52,00% (13)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>75,00% (39)</td>
+	<td>25,00% (13)</td>
+	<td bgcolor="#FFFFFF"><font color="#FF0031">76,92% (40 / 52)</font></td>
+</tr>
+</table>
+<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C8FFC8">
+<caption><b>
+<font color ="#008200">Condidence at 95% for 104 learn patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 4,62%  -  15,63% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 5,71%</td>
+</tr>
+</table>
+<br>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#FFC8BE">
+<caption><b>
+<font color ="#FF0031">Condidence at 95% for 52 test patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 13,72%  -  36,13% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 12,03%</td>
+</tr>
+</table>
+<br>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#D7C8FF">
+<caption><b>
+<font color ="#7B2CB5">Condidence at 95% for 52 validation patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 28,16%  -  53,93% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 13,84%</td>
+</tr>
+</table>
+<br>
+<br><h1>Perceptron</h1>
+Wed Mar 18 17:18:26 CET 2015<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+Description</b></caption><tr>
+	<th align="center">Architecture:</th>
+	<td valign="middle">60(Linear) x 2(Linear)</td>
+</tr>
+<tr>
+	<th align="center">Batch:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Stopping function:</th>
+	<td valign="middle">Time stopping function that stops after 100 cycles</td>
+</tr>
+<tr>
+	<th align="center">Learning rate function:</th>
+	<td valign="middle">Decreasing learning rate function from 0.05 to 0.005 on 1000 cycles with current learning rate = 0.039807968</td>
+</tr>
+<tr>
+	<th align="center">Regression:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Momentum:</th>
+	<td valign="middle">0.0</td>
+</tr>
+<tr>
+	<th align="center">Bias:</th>
+	<td valign="middle">true</td>
+</tr>
+</table>
+<br>
+<h3>Results:</h3>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+After <b>100</b> cycles:</b></caption><tr>
+	<th align="center"><font color ="#008200">Learn error:</font></th>
+	<td valign="middle">0.17307693</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#7B2CB5">Validation error:</font></th>
+	<td valign="middle">0.44230768</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#FF0031">Test error:</font></th>
+	<td valign="middle">0.26923078</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#C8FFC8">
+<caption><font color="#008200"<b>Learn Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>100,00% (59)</td>
+	<td>00,00% (0)</td>
+<td>56,73% (59)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>40,00% (18)</td>
+	<td>60,00% (27)</td>
+<td>43,27% (45)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>74,04% (77)</td>
+	<td>25,96% (27)</td>
+	<td bgcolor="#FFFFFF"><font color="#008200">82,69% (86 / 104)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#D7C8FF">
+<caption><font color="#7B2CB5"<b>Validation Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>84,00% (21)</td>
+	<td>16,00% (4)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>70,37% (19)</td>
+	<td>29,63% (8)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>76,92% (40)</td>
+	<td>23,08% (12)</td>
+	<td bgcolor="#FFFFFF"><font color="#7B2CB5">55,77% (29 / 52)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#FFC8BE">
+<caption><font color="#FF0031"<b>Test Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>92,59% (25)</td>
+	<td>07,41% (2)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>48,00% (12)</td>
+	<td>52,00% (13)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>71,15% (37)</td>
+	<td>28,85% (15)</td>
+	<td bgcolor="#FFFFFF"><font color="#FF0031">73,08% (38 / 52)</font></td>
+</tr>
+</table>
+<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C8FFC8">
+<caption><b>
+<font color ="#008200">Condidence at 95% for 104 learn patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 11,24%  -  25,71% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 7,50%</td>
+</tr>
+</table>
+<br>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#FFC8BE">
+<caption><b>
+<font color ="#FF0031">Condidence at 95% for 52 test patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 16,77%  -  40,25% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 12,61%</td>
+</tr>
+</table>
+<br>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#D7C8FF">
+<caption><b>
+<font color ="#7B2CB5">Condidence at 95% for 52 validation patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 31,59%  -  57,66% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 14,00%</td>
+</tr>
+</table>
+<br>
+<br><h1>Perceptron</h1>
+Wed Mar 18 17:20:26 CET 2015<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+Description</b></caption><tr>
+	<th align="center">Architecture:</th>
+	<td valign="middle">60(Linear) x 10(TanH) x 69(TanH) x 2(Gibbs)</td>
+</tr>
+<tr>
+	<th align="center">Batch:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Stopping function:</th>
+	<td valign="middle">Time stopping function that stops after 100 cycles</td>
+</tr>
+<tr>
+	<th align="center">Learning rate function:</th>
+	<td valign="middle">Decreasing learning rate function from 0.05 to 0.005 on 1000 cycles with current learning rate = 0.039807968</td>
+</tr>
+<tr>
+	<th align="center">Regression:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Momentum:</th>
+	<td valign="middle">0.0</td>
+</tr>
+<tr>
+	<th align="center">Bias:</th>
+	<td valign="middle">true</td>
+</tr>
+</table>
+<br>
+<h3>Results:</h3>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+After <b>100</b> cycles:</b></caption><tr>
+	<th align="center"><font color ="#008200">Learn error:</font></th>
+	<td valign="middle">0.1923077</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#7B2CB5">Validation error:</font></th>
+	<td valign="middle">0.40384614</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#FF0031">Test error:</font></th>
+	<td valign="middle">0.34615386</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#C8FFC8">
+<caption><font color="#008200"<b>Learn Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>94,92% (56)</td>
+	<td>05,08% (3)</td>
+<td>56,73% (59)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>37,78% (17)</td>
+	<td>62,22% (28)</td>
+<td>43,27% (45)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>70,19% (73)</td>
+	<td>29,81% (31)</td>
+	<td bgcolor="#FFFFFF"><font color="#008200">80,77% (84 / 104)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#D7C8FF">
+<caption><font color="#7B2CB5"<b>Validation Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>88,00% (22)</td>
+	<td>12,00% (3)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>66,67% (18)</td>
+	<td>33,33% (9)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>76,92% (40)</td>
+	<td>23,08% (12)</td>
+	<td bgcolor="#FFFFFF"><font color="#7B2CB5">59,62% (31 / 52)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#FFC8BE">
+<caption><font color="#FF0031"<b>Test Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>92,59% (25)</td>
+	<td>07,41% (2)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>64,00% (16)</td>
+	<td>36,00% (9)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>78,85% (41)</td>
+	<td>21,15% (11)</td>
+	<td bgcolor="#FFFFFF"><font color="#FF0031">65,38% (34 / 52)</font></td>
+</tr>
+</table>
+<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C8FFC8">
+<caption><b>
+<font color ="#008200">Condidence at 95% for 104 learn patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 12,81%  -  27,85% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 7,80%</td>
+</tr>
+</table>
+<br>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#FFC8BE">
+<caption><b>
+<font color ="#FF0031">Condidence at 95% for 52 test patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 23,15%  -  48,20% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 13,45%</td>
+</tr>
+</table>
+<br>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#D7C8FF">
+<caption><b>
+<font color ="#7B2CB5">Condidence at 95% for 52 validation patterns
+</font></b></caption><tr>
+	<th align="center">Confidence interval:</th>
+	<td valign="middle">[ 28,16%  -  53,93% ]</td>
+</tr>
+<tr>
+	<th align="center">Uncertainty:</th>
+	<td valign="middle">+/- 13,84%</td>
+</tr>
+</table>
+<br>
+<br><h1>Perceptron</h1>
+Wed Mar 18 17:21:26 CET 2015<br><table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+Description</b></caption><tr>
+	<th align="center">Architecture:</th>
+	<td valign="middle">60(Linear) x 10(Sigmoid) x 2(Gibbs)</td>
+</tr>
+<tr>
+	<th align="center">Batch:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Stopping function:</th>
+	<td valign="middle">Time stopping function that stops after 100 cycles</td>
+</tr>
+<tr>
+	<th align="center">Learning rate function:</th>
+	<td valign="middle">Decreasing learning rate function from 0.05 to 0.005 on 1000 cycles with current learning rate = 0.05</td>
+</tr>
+<tr>
+	<th align="center">Regression:</th>
+	<td valign="middle">false</td>
+</tr>
+<tr>
+	<th align="center">Momentum:</th>
+	<td valign="middle">0.0</td>
+</tr>
+<tr>
+	<th align="center">Bias:</th>
+	<td valign="middle">true</td>
+</tr>
+</table>
+<br>
+<h3>Results:</h3>
+<table cellpadding=3 cellspacing=3 border=0 bgcolor="#C9E2E2">
+<caption><b>
+After <b>100</b> cycles:</b></caption><tr>
+	<th align="center"><font color ="#008200">Learn error:</font></th>
+	<td valign="middle">NaN</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#7B2CB5">Validation error:</font></th>
+	<td valign="middle">NaN</td>
+</tr>
+<tr>
+	<th align="center"><font color ="#FF0031">Test error:</font></th>
+	<td valign="middle">NaN</td>
+</tr>
+</table>
+<br>
+<table border="1" bgcolor="#C8FFC8">
+<caption><font color="#008200"<b>Learn Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (59)</td>
+<td>56,73% (59)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (45)</td>
+<td>43,27% (45)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (104)</td>
+	<td bgcolor="#FFFFFF"><font color="#008200">43,27% (45 / 104)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#D7C8FF">
+<caption><font color="#7B2CB5"<b>Validation Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (25)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (27)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (52)</td>
+	<td bgcolor="#FFFFFF"><font color="#7B2CB5">51,92% (27 / 52)</font></td>
+</tr>
+</table>
+<br><table border="1" bgcolor="#FFC8BE">
+<caption><font color="#FF0031"<b>Test Confusion Matrix</b></font></caption>
+<tr  align=center>
+	<td></td>
+	<th colspan=04>delivred</th>
+	</tr>
+<tr>
+	<th rowspan="4">d<br>e<br>s<br>i<br>r<br>e<br>d<br></th>
+	<td></td>
+	<th>  Mine</th>
+	<th>  Rock</th>
+	<th>Sum</th>
+</tr>
+<tr>
+	<th>  Mine</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (27)</td>
+<td>51,92% (27)</td>
+</tr>
+<tr>
+	<th>  Rock</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (25)</td>
+<td>48,08% (25)</td>
+</tr>
+<tr>
+	<th>Sum</th>
+	<td>00,00% (0)</td>
+	<td>100,00% (52)</td>
+	<td bgcolor="#FFFFFF"><font color="#FF0031">48,08% (25 / 52)</font></td>
+</tr>
+</table>
+<br></body>
+</html>
