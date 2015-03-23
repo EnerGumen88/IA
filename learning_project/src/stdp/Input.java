@@ -24,11 +24,15 @@ public class Input {
         }
     }
 
+    public int taille(){
+        return data.size() ;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("") ;
         for(Datum d : data)
             sb.append(d+"\n") ;
-        return "Input taille = " + data.size() +"\n"+sb.toString();
+        return "Input taille = " + taille() +"\n"+sb.toString();
     }
 }

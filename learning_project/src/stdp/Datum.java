@@ -17,8 +17,18 @@ public class Datum {
         type = compo[60] ;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public Double getComposante(int i){
+        if(i <0 || i >60)
+            throw new IllegalArgumentException("indice hors limite") ;
+        return composantes.get(i) ;
+    }
+
     @Override
     public String toString() {
-        return "Datum "+ type + " : nb composante = "+ composantes.size();
+        return "Datum "+ getType() + " : nb composante = "+ composantes.size();
     }
 }
