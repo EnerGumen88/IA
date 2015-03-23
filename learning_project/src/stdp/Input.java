@@ -10,15 +10,25 @@ public class Input {
     private ArrayList<Datum> data ;
 
     public Input(String path) {
+        data = new ArrayList<Datum>() ;
         try {
             BufferedReader f = new BufferedReader(new FileReader(new File(path))) ;
             String line = "" ;
             while((line = f.readLine()) != null)
-                data.add(new Datum(line)) ;
+                if(!line.isEmpty())
+                    data.add(new Datum(line)) ;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("") ;
+        for(Datum d : data)
+            sb.append(d+"\n") ;
+        return "Input taille = " + data.size() +"\n"+sb.toString();
     }
 }
