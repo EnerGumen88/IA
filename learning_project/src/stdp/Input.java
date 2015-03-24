@@ -10,13 +10,17 @@ public class Input {
     private ArrayList<Datum> data ;
 
     public Input(String path) {
-        data = new ArrayList<Datum>() ;
+        data = new ArrayList<>() ;
         try {
             BufferedReader f = new BufferedReader(new FileReader(new File(path))) ;
             String line = "" ;
-            while((line = f.readLine()) != null)
-                if(!line.isEmpty())
-                    data.add(new Datum(line)) ;
+            int cnt = 0 ;
+            while((line = f.readLine()) != null){
+                if(!line.isEmpty()){
+                    cnt++ ;
+                    data.add(new Datum(line, cnt)) ;
+                }
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -26,6 +30,10 @@ public class Input {
 
     public int taille(){
         return data.size() ;
+    }
+
+    public ArrayList<Datum> getData() {
+        return data;
     }
 
     @Override

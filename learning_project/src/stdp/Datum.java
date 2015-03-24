@@ -8,10 +8,12 @@ import java.util.ArrayList;
 public class Datum {
     private ArrayList<Double> composantes ;
     private String type ;
+    private int indice ;
 
-    public Datum(String line) {
+    public Datum(String line, int ind) {
         String[] compo = line.split(",") ;
-        composantes = new ArrayList<Double>() ;
+        composantes = new ArrayList<>() ;
+        indice = ind ;
         for(int i = 0; i <60; i++)
             composantes.add(Double.parseDouble(compo[i])) ;
         type = compo[60] ;
@@ -21,14 +23,18 @@ public class Datum {
         return type;
     }
 
+    public int getIndice() {
+        return indice;
+    }
+
     public Double getComposante(int i){
-        if(i <0 || i >60)
+        if(i <0 || i >=60)
             throw new IllegalArgumentException("indice hors limite") ;
         return composantes.get(i) ;
     }
 
     @Override
     public String toString() {
-        return "Datum "+ getType() + " : nb composante = "+ composantes.size();
+        return "Datum n°"+indice+" "+ getType() + " : nb composante = "+ composantes.size();
     }
 }
